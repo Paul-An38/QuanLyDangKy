@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+	<!--Book tree view-->
+		<record model="ir.ui.view" id="view_hocphan_tree">
+			<field name="name">hocphan.tree</field>
+			<field name="model">hocphan.danhsachhocphan</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Danh sách học phần">
+					<field name="tenhp"/>
+					<field name="sotinchi"/>
+					<field name="tienquyet"/>
+					<field name="hocphantienquyet"/>
+				</tree>
+			</field>
+		</record>
+	
+	<!--Book form view-->
+		<record model="ir.ui.view" id="view_hocphan_form">
+			<field name="name">hocphan.form</field>
+			<field name="model">hocphan.danhsachhocphan</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="hocphan">
+					<group>
+						<group><field name="tenhp" string="Tên học phần:"/></group>
+						<group><field name="sotinchi" string="Số tín chỉ:"/></group>
+						<group colspan="5">
+							<notebook >
+								<page string="Học phần tiên quyết">
+									<field  name="tienquyet" />
+								</page>
+							</notebook>
+						</group>
+					</group>
+				</form>
+			</field>
+		</record>
+		
+	<!--Book Action-->
+		 <record model="ir.actions.act_window" id="action_hocphan">
+            <field name="name">Thông tin chi tiết</field>
+            <field name="res_model">hocphan.danhsachhocphan</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+		
+		 <record model="ir.actions.act_window" id="action_hocphan_tree">
+            <field name="name">Thông tin chi tiết</field>
+            <field name="res_model">hocphan.danhsachhocphan</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+		<!-- lớp học phần  -->
+		<!--Book search view-->
+		<!-- <record model="ir.ui.view" id="view_hocphan_search">
+			<field name="name">hocphan.search</field>
+			<field name="model">hocphan.danhsachhocphan</field>
+			<field name="type">search</field>
+			<field name="arch" type="xml">
+				<search string="hocphan Information Search">
+					<field name="name" string="hocphan Name"/>
+					<field name="genre" string="hocphan Genre"/>
+				</search>
+			</field>
+		</record> -->
+		
+		<!--Book tree view-->
+		<record model="ir.ui.view" id="view_lophocphan_tree">
+			<field name="name">lophocphan.tree</field>
+			<field name="model">lophocphan.danhsachlophocphan</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Danh sách lớp học phần">
+					<field name="malophocphan"/>
+					<field name="tenhocphan"/>
+					<field name="giangvien"/>
+					<field name="ngaybd"/>
+					<field name="ngaykt"/>
+					<field name="ghichu"/>
+				</tree>
+			</field>
+		</record>
+
+		<!--Book form view-->
+		<record model="ir.ui.view" id="view_lophocphan_form">
+			<field name="name">lophocphan.form</field>
+			<field name="model">lophocphan.danhsachlophocphan</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="lophocphan">
+					<group>
+						<group colspan="2"><field  name="malophocphan" string="Mã lớp học phần:"/></group>
+						<group>
+							<field name="tenhocphan" string="Tên học phần"/>
+							<field name="giangvien" string="Giảng viên"/>
+						</group>
+						<group>
+							<field name="ngaybd" string="Ngày bắt đầu"/>
+							<field name="ngaykt" string="ngày kết thúc"/>
+						</group>
+						<notebook>
+							<page string="Thông tin">
+								<group>
+									<field name="ghichu"/>
+								</group>
+							</page>
+						</notebook>
+					</group>
+				</form>
+			</field>
+		</record>
+		
+		<!--Book Action-->
+		<record model="ir.actions.act_window" id="action_lophocphan">
+			<field name="name">Thông tin chi tiết</field>
+			<field name="res_model">lophocphan.danhsachlophocphan</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<record model="ir.actions.act_window" id="action_lophocphan_tree">
+			<field name="name">Thông tin chi tiết</field>
+			<field name="res_model">lophocphan.danhsachlophocphan</field>
+			<field name="view_type">tree</field>
+			<field name="view_mode">tree</field>
+		</record>
+
+	</data>
+</openerp>

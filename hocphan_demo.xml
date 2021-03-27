@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="1">
+		<!--Books-->
+		<record id="hocphan_01" model="hocphan.danhsachhocphan">
+			<field name="tenhp">Toán cơ bản</field>
+			<field name="sotinchi">25</field>
+			<field name="tienquyet">Toán cấp 1</field>
+		</record>
+		<record id="hocphan_02" model="hocphan.danhsachhocphan">
+			<field name="tenhp">Toán nâng cao</field>
+			<field name="sotinchi">25</field>
+			<field name="tienquyet">Toán cơ bản</field>
+		</record>
+	</data>
+</openerp>

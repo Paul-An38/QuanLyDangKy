@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+	<!--Book Menu-->
+		<menuitem id="hocphan_parent" name="Quản lý học phần" icon="STOCK_OPEN"/>
+		<menuitem id="menu_hocphan_parent" name="Tính năng học phần" parent="hocphan_parent"/>
+		<menuitem action="action_hocphan" id="menu_hocphan_hocphan" parent="menu_hocphan_parent" string="Result"/>
+		<menuitem action="action_hocphan_tree" name="Danh sách học phần" id="menu_hocphan_tree" parent="menu_hocphan_parent" string="Danh sách học phần"/>
+	
+		<menuitem id="menu_lophocphan_parent" name="Tính năng lớp học phần" parent="hocphan_parent"/>
+		<menuitem action="action_lophocphan" id="menu_lophocphan_hocphan" parent="menu_lophocphan_parent" string="Result"/>
+		<menuitem action="action_lophocphan_tree" name="Danh sách lớp học phần" id="menu_lophocphan_tree" parent="menu_lophocphan_parent" string="Danh sách lớp học phần"/>
+	
+	</data>
+</openerp>
